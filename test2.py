@@ -69,8 +69,16 @@ outputDTIName = arguments["inputDWIVolume"]
 if outputDTIName.find("DWI") != -1:
 	outputDTIName = outputDTIName.replace("DWI", "DTI")
 else:
-	outputDTIName = outputDTIName + "_DTI"
+	outputDTIName = outputDTIName.split(".")[0] + "_DTI" + "." + outputDTIName.split(".")[1]
 	
 system("dtiestim -M "+arguments["M"]+" -m wls --correctionType nearest --inputDWIVolume "+arguments["inputDWIVolume"]+" --outputDTIVolume "+outputDTIName)	
+
+
+#running dtiprocess
+outputMDName = outputDTIName.replace("DTI", "MD")
+outputADName = outputDTIName.replace("DTI", "AD")
+outputRDName = outputDTIName.replace("DTI", "RD")
+system("dtiprocess --dti_image "+outputDTIName+" -m "+outputMDName+" --lambda1_output "+outputADName+" --RD_output "+outputRDName)
+
 
 
