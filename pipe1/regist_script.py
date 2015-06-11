@@ -6,7 +6,7 @@ import os
 arguments = {}
 
 
-arguments_names = ["-config","config_regist.txt","RD","T1","T2","ATLAS","OUT_ANTS_PREFIX"]
+arguments_names = ["-config","config_regist.txt"]
 
 arguments[sys.argv[1][1:]]=sys.argv[2]
 
