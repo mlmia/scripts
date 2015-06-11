@@ -1,0 +1,6 @@
+RD:/home/workstation1/test_scripts/subject4-1year_42_DWI-Trio_QCed_VC_Upx2_RD.nrrd
+T1:/home/workstation1/test_scripts/DTI_Summer15/struct_atlas/1year-Average-IBIS-MNI-t1w.nrrd
+T2:/home/workstation1/test_scripts/DTI_Summer15/struct_atlas/1year-Average-IBIS-MNI-t2w.nrrd
+ATLAS:/home/workstation1/test_scripts/DTI_Summer15/struct_atlas/atlas90-Parclabel_1year-Average-IBIS.nrrd
+OUT_ANTS_PREFIX:/home/workstation1/test_scripts/reg/warp_t1w_t2w_
+OUT_WARP:/home/workstation1/test_scripts/Atlaswarp/warped_brain.nrrd
