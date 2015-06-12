@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# __Author__ ARTHUR MEDEIROS
+
 
 import sys
 import os
 arguments = {}
 
 
-arguments_names = ["-config","config_regist.txt"]
+arguments_names = ["-config",sys.argv[2]]
 
 arguments[sys.argv[1][1:]]=sys.argv[2]
 
@@ -16,16 +18,16 @@ arguments["config"]
 if len(sys.argv)-1 != 2:
 	print "ERROR: this script only needs 2 parameters, example:"
 	print "'regist_new.py -config config_regist.txt'"
-	exit(0)
+	exit(-1)
 else:
 	print "Number of arguments: ", len(sys.argv)-1
 
 
 #Checking if the input is  correct:
-if (sys.argv[1] != arguments_names[0]) or (sys.argv[2] != arguments_names[1]):
+if (sys.argv[1] != arguments_names[0]):
 	print "ERROR: unable to find the input file."
-	print "Please type: regist_new.py -config config_regist.txt"
-	exit(0)
+	print "Example: regist_new.py -config config_regist.txt"
+	exit(-1)
 else:
 	print "Input file was found"
 
@@ -42,6 +44,7 @@ if len(lines) != 6:
 	print "ATLAS:/file location"
 	print "OUT_ANTS_PREFIX"
 	print  "OUT_WARP "
+	exit(-1)
 	
 
 else:
