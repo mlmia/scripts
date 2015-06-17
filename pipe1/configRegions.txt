@@ -1,3 +1,0 @@
-input image:/home/workstation1/test_scripts/Atlaswarp/warped_brain.nrrd
-output image:/home/workstation1/test_scripts/Atlaswarp/region1.nii.gz
-extract label:1
